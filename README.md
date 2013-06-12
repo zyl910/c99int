@@ -3,16 +3,16 @@ c99int
 
 Auto C99 integer type compliant (让VC等编译器自动兼容C99的整数类型) .
 
-Language: C/C++/Objective-C .
+Language: C .
 
 
-# Files (文件说明)
+## Files (文件说明)
 
 * auto_inttypes.h : Auto include C99 inttypes.h .
 * auto_stdint.h : Auto include C99 stdint.h .
 
 
-# Compiler compatibility (编译器兼容性)
+## Compiler compatibility (编译器兼容性)
 
 * Virtual C++: 6, 7.1(2003), 8(2005), 9(2008), 10(2010), 11(2012).
 * Borland C++ Builder: 6.
@@ -21,7 +21,7 @@ Language: C/C++/Objective-C .
 * GCC(MinGW): 4.6.2(MinGW(20120426)), 4.7.1(TDM-GCC(MinGW-w64)).
 
 
-# Version history (版本历史)
+## Version history (版本历史)
 
 [2013-01-10] v1.01: http://www.cnblogs.com/zyl910/archive/2013/01/10/c99int_v101.html
 
