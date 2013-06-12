@@ -12,7 +12,7 @@ Language: C .
 * auto_stdint.h : Auto include C99 stdint.h .
 
 
-## Compiler compatibility (编译器兼容性)
+## Tested compiler (测试过的编译器)
 
 * Virtual C++: 6, 7.1(2003), 8(2005), 9(2008), 10(2010), 11(2012).
 * Borland C++ Builder: 6.
