@@ -5,7 +5,7 @@ c99int
 * Language:	C
 * Type:	Lightweight C library.
 * Platform:	All platform.
-* Version:	v1.0
+* Version:	v1.1
 * Blog:	http://www.cnblogs.com/zyl910/tag/c99int/
 * Git:	https://github.com/zyl910/c99int
 
@@ -32,7 +32,7 @@ References (参考文献) --
 
 ## Usage (用法)
 
-Add "auto_stdint.h" and "auto_inttypes.h" to you project (将"auto_stdint.h" and "auto_inttypes.h"加入到你的项目).
+Add "auto_stdint.h" and "auto_inttypes.h" to you project (将"auto_stdint.h" and "auto_inttypes.h"加入到您的项目).
 
 Example code:
 
