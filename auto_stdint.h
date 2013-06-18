@@ -1,48 +1,58 @@
 ////////////////////////////////////////////////////////////
-// stdint.h: 兼容C99标准的stdint.h
-// Author: zyl910
-// Blog: http://www.cnblogs.com/zyl910
-// URL: http://www.cnblogs.com/zyl910/archive/2012/08/08/c99int.html
-// Version: V1.0
-// Updata: 2012-08-08
-//
-// 测试过的编译器--
-// VC: 6, 2003, 2005, 2010.
-// BCB: 6.
-// GCC: 4.6.2, 4.7.0.
-//
-//
-// Update
-// ~~~~~~
-//
-// [2012-08-08] V1.0
-// * V1.0发布.
-// * 参考了 msinttypes-r26. http://code.google.com/p/msinttypes/
-// * 修正了 VC6编译C++程序时wchar.h会报错 问题.
-//
+/*
+auto_stdint.h: 兼容C99标准的stdint.h
+Author: zyl910
+Blog: http://www.cnblogs.com/zyl910
+URL: http://www.cnblogs.com/zyl910/archive/2013/01/10/c99int_v101.html
+Version: V1.01
+Updata: 2013-01-10
+
+测试过的编译器--
+VC: 6, 2003, 2005, 2008, 2010, 2012.
+BCB: 6.
+GCC(Linux): 4.7.0(Fedora 17).
+GCC(Mac): llvm-gcc-4.2(Mac OS X Lion 10.7.4, Xcode 4.4.1).
+GCC(MinGW): 4.6.2(MinGW(20120426)), 4.7.1(TDM-GCC(MinGW-w64)).
+
+
+Update
+~~~~~~
+
+[2013-01-01] V1.01
+* 检查了对VC2008、VC2012的兼容性. 确认VC2008不支持stdint.h.
+* 为了避免包含目录问题，更名auto_stdint.h（原stdint.h）.
+* 更改宏名：__AUTO_STDINT_H_INCLUDED（原_STDINT_H_ALL_），__AUTO_STDINT_H_USESYS（原_STDINT_H_SYS_）.
+
+[2012-08-08] V1.0
+* V1.0发布.
+* 参考了 msinttypes-r26. http://code.google.com/p/msinttypes/
+* 修正了 VC6编译C++程序时wchar.h会报错 问题.
+
+
+*/
 ////////////////////////////////////////////////////////////
 
-#ifndef _STDINT_H_ALL_
-#define _STDINT_H_ALL_
+#ifndef __AUTO_STDINT_H_INCLUDED
+#define __AUTO_STDINT_H_INCLUDED
 
-// _STDINT_H_SYS_: 编译器是否提供了<stdint.h>
-#undef _STDINT_H_SYS_
+// __AUTO_STDINT_H_USESYS: 编译器是否提供了<stdint.h>
+#undef __AUTO_STDINT_H_USESYS
 #if defined(__GNUC__)	// GCC.
-	#define _STDINT_H_SYS_
-#elif defined(_MSC_VER)	// MSVC. VC6至VC2005均没有, 似乎从VC2010才支持的.
+	#define __AUTO_STDINT_H_USESYS
+#elif defined(_MSC_VER)	// MSVC. VC6至VC2008均没有, 从VC2010才支持的.
 	#if _MSC_VER >=1600	// VC2010
-		#define _STDINT_H_SYS_
+		#define __AUTO_STDINT_H_USESYS
 	#endif	// #if _MSC_VER >=1600	// VC2010
 #elif defined(__BORLANDC__)	// BCB. BCB6是支持的.
 	#if __BORLANDC__ >=0x0560	// BCB6
-		#define _STDINT_H_SYS_
+		#define __AUTO_STDINT_H_USESYS
 	#endif	// #if __BORLANDC__ >=0x0560	// BCB6
 #else
 	#define _INTTYPES_H_SYS_	// 假设其他编译器支持C99.
-#endif	// _STDINT_H_SYS_
+#endif	// __AUTO_STDINT_H_USESYS
 
 
-#ifdef _STDINT_H_SYS_
+#ifdef __AUTO_STDINT_H_USESYS
 // 使用编译器提供的<stdint.h>
 #include <stdint.h>
 #else
@@ -63,7 +73,7 @@
 //#ifdef __cplusplus
 //}
 //#endif
-// 在VC6下测试时, 发现上面的方法会报告很多C2733错误. 还是直接include算了.
+// <zyl910>: 在VC6下测试时, 发现上面的方法会报告很多C2733错误. 还是直接include算了.
 #include <wchar.h>
 
 // Define _W64 macros to mark types changing their size, like intptr_t.
@@ -258,6 +268,6 @@ typedef uint64_t  uintmax_t;
 
 #endif // _MSC_STDINT_H_ ]
 
-#endif // #ifdef _STDINT_H_SYS_
+#endif // #ifdef __AUTO_STDINT_H_USESYS
 
-#endif // #ifndef _STDINT_H_ALL_
+#endif // #ifndef __AUTO_STDINT_H_INCLUDED

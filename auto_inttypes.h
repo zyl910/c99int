@@ -1,42 +1,52 @@
 ////////////////////////////////////////////////////////////
-// inttypes.h: 兼容C99标准的inttypes.h
-// Author: zyl910
-// Blog: http://www.cnblogs.com/zyl910
-// URL: http://www.cnblogs.com/zyl910/archive/2012/08/08/c99int.html
-// Version: V1.0
-// Updata: 2012-08-08
-//
-// 测试过的编译器--
-// VC: 6, 2003, 2005, 2010.
-// BCB: 6.
-// GCC: 4.6.2, 4.7.0.
-//
-//
-// Update
-// ~~~~~~
-//
-// [2012-08-08] V1.0
-// * V1.0发布.
-// * 参考了 msinttypes-r26. http://code.google.com/p/msinttypes/
-// * 修正VC6不支持I32问题.
-//
+/*
+auto_inttypes.h: 兼容C99标准的inttypes.h
+Author: zyl910
+Blog: http://www.cnblogs.com/zyl910
+URL: http://www.cnblogs.com/zyl910/archive/2013/01/10/c99int_v101.html
+Version: V1.01
+Updata: 2013-01-10
+
+测试过的编译器--
+VC: 6, 2003, 2005, 2008, 2010, 2012.
+BCB: 6.
+GCC(Linux): 4.7.0(Fedora 17).
+GCC(Mac): llvm-gcc-4.2(Mac OS X Lion 10.7.4, Xcode 4.4.1).
+GCC(MinGW): 4.6.2(MinGW(20120426)), 4.7.1(TDM-GCC(MinGW-w64)).
+
+
+Update
+~~~~~~
+
+[2013-01-10] V1.01
+* 检查了对VC2008、VC2012的兼容性. 确认VC2012仍不支持inttypes.h.
+* 为了避免包含目录问题，更名auto_stdint.h（原stdint.h）.
+* 更改宏名：__AUTO_INTTYPES_H_INCLUDED（原_INTTYPES_H_ALL_），__AUTO_INTTYPES_H_USESYS（原_INTTYPES_H_SYS_）.
+
+[2012-08-08] V1.00
+* V1.0发布.
+* 参考了 msinttypes-r26. http://code.google.com/p/msinttypes/
+* 修正VC6不支持I32问题.
+
+
+*/
 ////////////////////////////////////////////////////////////
 
-#ifndef _INTTYPES_H_ALL_
-#define _INTTYPES_H_ALL_
+#ifndef __AUTO_INTTYPES_H_INCLUDED
+#define __AUTO_INTTYPES_H_INCLUDED
 
-// _INTTYPES_H_SYS_: 编译器是否提供了<inttypes.h>
-#undef _INTTYPES_H_SYS_
+// __AUTO_INTTYPES_H_USESYS: 编译器是否提供了<inttypes.h>
+#undef __AUTO_INTTYPES_H_USESYS
 #if defined(__GNUC__)	// GCC.
-	#define _INTTYPES_H_SYS_
-#elif defined(_MSC_VER)	// MSVC. VC2010仍不支持.
+	#define __AUTO_INTTYPES_H_USESYS
+#elif defined(_MSC_VER)	// MSVC. VC2012仍不支持.
 #elif defined(__BORLANDC__)	// BCB. BCB6仍不支持.
 #else
-	#define _INTTYPES_H_SYS_	// 假设其他编译器支持C99.
-#endif	// _INTTYPES_H_SYS_
+	#define __AUTO_INTTYPES_H_USESYS	// 假设其他编译器支持C99.
+#endif	// __AUTO_INTTYPES_H_USESYS
 
 
-#ifdef _INTTYPES_H_SYS_
+#ifdef __AUTO_INTTYPES_H_USESYS
 // 使用编译器提供的<inttypes.h>
 #include <inttypes.h>
 #else
@@ -45,7 +55,8 @@
 #ifndef _MSC_INTTYPES_H_ // [
 #define _MSC_INTTYPES_H_
 
-#include "stdint.h"
+//#include "stdint.h"
+#include "auto_stdint.h"
 
 // 7.8 Format conversion of integer types
 
@@ -335,6 +346,6 @@ imaxdiv_t __cdecl imaxdiv(intmax_t numer, intmax_t denom)
 
 #endif // _MSC_INTTYPES_H_ ]
 
-#endif // #ifdef _INTTYPES_H_SYS_
+#endif // #ifdef __AUTO_INTTYPES_H_USESYS
 
-#endif // #ifndef _INTTYPES_H_ALL_
+#endif // #ifndef __AUTO_INTTYPES_H_INCLUDED

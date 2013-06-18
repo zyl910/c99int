@@ -93,11 +93,11 @@ SOURCE=.\c99int.c
 # PROP Default_Filter "h;hpp;hxx;hm;inl"
 # Begin Source File
 
-SOURCE=.\inttypes.h
+SOURCE=.\auto_inttypes.h
 # End Source File
 # Begin Source File
 
-SOURCE=.\stdint.h
+SOURCE=.\auto_stdint.h
 # End Source File
 # End Group
 # Begin Group "Resource Files"

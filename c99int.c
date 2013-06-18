@@ -1,19 +1,25 @@
 ////////////////////////////////////////////////////////////
-// c99int.c: 测试C99整数类型.
-// Author: zyl910
-// Blog: http://www.cnblogs.com/zyl910
-// URL: http://www.cnblogs.com/zyl910/archive/2012/08/08/c99int.html
-// Version: V1.0
-// Updata: 2012-08-08
-//
-//
-//
-// Update
-// ~~~~~~
-//
-// [2012-08-08] V1.0
-// V1.0发布.
-//
+/*
+c99int.c: 测试C99整数类型.
+Author: zyl910
+Blog: http://www.cnblogs.com/zyl910
+URL: http://www.cnblogs.com/zyl910/archive/2013/01/10/c99int_v101.html
+Version: V1.01
+Updata: 2013-01-01
+
+
+
+Update
+~~~~~~
+
+[2013-01-10] V1.01
+* 使用V1.01版的auto_stdint.h、auto_inttypes.h。
+
+[2012-08-08] V1.0
+* V1.0发布.
+
+
+*/
 ////////////////////////////////////////////////////////////
 
 #define __STDC_LIMIT_MACROS
@@ -24,8 +30,8 @@
 
 #include <wchar.h>
 
-#include "stdint.h"
-#include "inttypes.h"
+#include "auto_stdint.h"
+#include "auto_inttypes.h"
 
 
 int main(int argc, char* argv[])
