@@ -1,61 +1,69 @@
+.PHONY : all clean
+
 # flags
 CC = gcc
-CFS = -Wall
+CFLAGS += -Wall -I../../src
+#LDFLAGS += -L../../lib
+#LIBS += -lglib
 
 # args
 RELEASE =0
 UNICODE =0
 BITS =
-CFLAGS =
+EXFLAGS =
 
-# [args] Éú³ÉÄ£Ê½. 0´ú±ídebugÄ£Ê½, 1´ú±íreleaseÄ£Ê½. make RELEASE=1.
+# [args] ç”Ÿæˆæ¨¡å¼. 0ä»£è¡¨debugæ¨¡å¼, 1ä»£è¡¨releaseæ¨¡å¼. make RELEASE=1.
 ifeq ($(RELEASE),0)
 	# debug
-	CFS += -g
+	CFLAGS += -g
 else
 	# release
-	CFS += -O3 -DNDEBUG
-	//CFS += -O3 -g -DNDEBUG
+	CFLAGS += -O3 -DNDEBUG
+	//CFLAGS += -O3 -g -DNDEBUG
 endif
 
-# [args] UNICODEÄ£Ê½. 0´ú±íansiÄ£Ê½, 1´ú±íunicodeÄ£Ê½. make UNICODE=1.
+# [args] UNICODEæ¨¡å¼. 0ä»£è¡¨ansiæ¨¡å¼, 1ä»£è¡¨unicodeæ¨¡å¼. make UNICODE=1.
 ifeq ($(UNICODE),0)
 	# ansi
-	CFS +=
+	CFLAGS +=
 else
 	# unicode
-	CFS += -D_UNICODE -DUNICODE
+	CFLAGS += -D_UNICODE -DUNICODE
 endif
 
-# [args] ³ÌĞòÎ»Êı. 32´ú±í32Î»³ÌĞò, 64´ú±í64Î»³ÌĞò, ÆäËûÄ¬ÈÏ. make BITS=32.
+# [args] ç¨‹åºä½æ•°. 32ä»£è¡¨32ä½ç¨‹åº, 64ä»£è¡¨64ä½ç¨‹åº, å…¶ä»–é»˜è®¤. make BITS=32.
 ifeq ($(BITS),32)
-	CFS += -m32
+	CFLAGS += -m32
 else
 	ifeq ($(BITS),64)
-		CFS += -m64
+		CFLAGS += -m64
 	else
 	endif
 endif
 
-# [args] Ê¹ÓÃ CFLAGS Ìí¼ÓĞÂµÄ²ÎÊı. make CFLAGS="-mavx".
-CFS += $(CFLAGS)
+# [args] æ‰©å±•å‚æ•°. make EXFLAGS="-mavx".
+CFLAGS += $(EXFLAGS)
 
 
-.PHONY : all clean
+# makefile path.
+vpath %.h ../../src
 
 # files
-TARGETS = c99int
-OBJS = c99int.o
+TARGETS = c99inttest
+OBJS = c99inttest.o
 
 all : $(TARGETS)
 
-c99int : $(OBJS)
-	$(CC) -o $@ $^ $(CFS)
+c99inttest : $(OBJS)
+	$(CC) -o $@ $^ $(CFLAGS) $(LDFLAGS) $(LIBS)
 
 
-c99int.o : c99int.c
-	$(CC) -c $< $(CFS)
+c99inttest.o : c99inttest.c auto_stdint.h auto_inttypes.h
+	$(CC) -c $< $(CFLAGS)
 
 
 clean :
-	rm -f $(OBJS) $(TARGETS) $(addsuffix .exe,$(TARGETS))
+	$(RM) $(OBJS) $(TARGETS) $(addsuffix .exe,$(TARGETS))
+
+ 
+ 
