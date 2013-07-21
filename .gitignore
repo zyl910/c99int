@@ -15,3 +15,7 @@
 *.exe
 *.out
 *.app
+/examples/c99inttest/Debug
+/examples/c99inttest/Release
+/examples/c99inttest/x64
+*.suo
