@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "c99int_2012", "c99int_2012.vcxproj", "{8F83CB80-058A-4D56-B7EB-B797919AD3C3}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "c99inttest_2012", "c99inttest_2012.vcxproj", "{8F83CB80-058A-4D56-B7EB-B797919AD3C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

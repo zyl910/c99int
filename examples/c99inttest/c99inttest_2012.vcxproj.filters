@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="auto_inttypes.h">
+    <ClInclude Include="..\..\src\auto_inttypes.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="auto_stdint.h">
+    <ClInclude Include="..\..\src\auto_stdint.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="c99int.c">
+    <ClCompile Include="c99inttest.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

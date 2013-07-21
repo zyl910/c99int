@@ -19,3 +19,4 @@
 /examples/c99inttest/Release
 /examples/c99inttest/x64
 *.suo
+*.sdf
