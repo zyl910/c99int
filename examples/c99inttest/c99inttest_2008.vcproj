@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="c99int_2008"
+	Name="c99inttest_2008"
 	ProjectGUID="{B428B196-13DC-453A-BD9E-69D7657A0A92}"
-	RootNamespace="c99int_2008"
+	RootNamespace="c99inttest_2008"
 	Keyword="Win32Proj"
 	TargetFrameworkVersion="196613"
 	>
@@ -41,6 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
+				AdditionalIncludeDirectories="..\..\src"
 				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -114,6 +115,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
+				AdditionalIncludeDirectories="..\..\src"
 				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
@@ -171,7 +173,7 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\c99int.c"
+				RelativePath=".\c99inttest.c"
 				>
 			</File>
 		</Filter>
@@ -181,11 +183,11 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\auto_inttypes.h"
+				RelativePath="..\..\src\auto_inttypes.h"
 				>
 			</File>
 			<File
-				RelativePath=".\auto_stdint.h"
+				RelativePath="..\..\src\auto_stdint.h"
 				>
 			</File>
 		</Filter>

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "c99int_2008", "c99int_2008.vcproj", "{B428B196-13DC-453A-BD9E-69D7657A0A92}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "c99inttest_2008", "c99inttest_2008.vcproj", "{B428B196-13DC-453A-BD9E-69D7657A0A92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
