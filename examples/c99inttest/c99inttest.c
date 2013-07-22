@@ -33,9 +33,13 @@ Update
 #include "auto_stdint.h"
 #include "auto_inttypes.h"
 
-
-int main(int argc, char* argv[])
-{
+/**
+ * main.
+ *
+ * \param argc argc.
+ * @param argv argv.
+ */
+int main(int argc, char* argv[]) {
 	uint8_t i8 = (uint8_t)INT8_C(-1);
 	uint16_t i16 = (uint16_t)INT16_C(-1);
 	uint32_t i32 = (uint32_t)INT32_C(-1);
