@@ -36,8 +36,9 @@ Update
 /**
  * main.
  *
- * \param argc argc.
- * @param argv argv.
+ * @param argc argc.
+ * \param argv argv.
+ * \return status.
  */
 int main(int argc, char* argv[]) {
 	uint8_t i8 = (uint8_t)INT8_C(-1);
