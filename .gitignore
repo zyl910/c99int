@@ -26,3 +26,5 @@
 *.obj
 
 *.tds
+
+/examples/c99inttest/build
