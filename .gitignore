@@ -20,3 +20,9 @@
 /examples/c99inttest/x64
 *.suo
 *.sdf
+
+*.~bpr
+
+*.obj
+
+*.tds
