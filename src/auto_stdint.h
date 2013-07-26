@@ -1,36 +1,3 @@
-////////////////////////////////////////////////////////////
-/*
-auto_stdint.h: 兼容C99标准的stdint.h
-Author: zyl910
-Blog: http://www.cnblogs.com/zyl910
-URL: http://www.cnblogs.com/zyl910/archive/2013/01/10/c99int_v101.html
-Version: V1.01
-Updata: 2013-01-10
-
-测试过的编译器--
-VC: 6, 2003, 2005, 2008, 2010, 2012.
-BCB: 6.
-GCC(Linux): 4.7.0(Fedora 17).
-GCC(Mac): llvm-gcc-4.2(Mac OS X Lion 10.7.4, Xcode 4.4.1).
-GCC(MinGW): 4.6.2(MinGW(20120426)), 4.7.1(TDM-GCC(MinGW-w64)).
-
-
-Update
-~~~~~~
-
-[2013-01-01] V1.01
-* 检查了对VC2008、VC2012的兼容性. 确认VC2008不支持stdint.h.
-* 为了避免包含目录问题，更名auto_stdint.h（原stdint.h）.
-* 更改宏名：__AUTO_STDINT_H_INCLUDED（原_STDINT_H_ALL_），__AUTO_STDINT_H_USESYS（原_STDINT_H_SYS_）.
-
-[2012-08-08] V1.0
-* V1.0发布.
-* 参考了 msinttypes-r26. http://code.google.com/p/msinttypes/
-* 修正了 VC6编译C++程序时wchar.h会报错 问题.
-
-
-*/
-////////////////////////////////////////////////////////////
 
 /** @addtogroup GROUP_ZYLLIBC	zylLibC
  * [zyl910](mailto:zyl910hero@gmail.com)'s C/C++ librarys.

@@ -1,0 +1,19 @@
+﻿/** @mainpage
+
+Auto C99 integer type compliant (让VC等编译器自动兼容C99的整数类型) .
+
+## Detail (详情)
+
+* @ref GROUP_C99INT
+
+## Examples (范例)
+
+* @ref GROUP_C99INT_C99INTTEST
+
+*/
+
+/** @addtogroup GROUP_ZYLLIBC	zylLibC
+ * [zyl910](mailto:zyl910hero@gmail.com)'s C/C++ librarys.
+ * @{
+ * @}
+ */
