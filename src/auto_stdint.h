@@ -32,6 +32,50 @@ Update
 */
 ////////////////////////////////////////////////////////////
 
+/** @addtogroup GROUP_ZYLLIBC	zylLibC
+ * [zyl910](mailto:zyl910hero@gmail.com)'s C/C++ librarys.
+ * @{
+ */
+
+/** @addtogroup GROUP_C99INT	c99int
+ * Auto C99 integer type compliant (让VC等编译器自动兼容C99的整数类型) .
+ *
+ * @author	[zyl910](mailto:zyl910hero@gmail.com)
+ * @version	1.2
+ * @date	2013-07-26
+ *
+ * Links:
+ *
+ * * Git: https://github.com/zyl910/c99int
+ * * Blog: http://www.cnblogs.com/zyl910
+ *
+ *
+ * ## Change history (变更日志)
+ *
+ * [2013-07-26] v1.2
+ *
+ * * 调整目录结构.
+ * * 使用doxygen规范注释.
+ *
+ * [2013-07-26] v1.1
+ *
+ * * Files rename to "auto_stdint.h", "auto_inttypes.h" (文件改名为 "auto_stdint.h", "auto_inttypes.h").
+ * * Check compiler compliant(检测编译器兼容性): Visual C++ 9(2008), Visual C++ 11(2012).
+ *
+ * [2012-08-08] v1.0
+ *
+ * * Release v1.0 (发布1.0版) .
+ *
+ * @{
+ */
+
+/**
+ * @file	auto_stdint.h
+ * @brief	Auto include C99 stdint.h (自动引用C99标准的stdint.h).
+ * @since	@ref GROUP_C99INT 1.0
+ */
+
+
 #ifndef __AUTO_STDINT_H_INCLUDED
 #define __AUTO_STDINT_H_INCLUDED
 
@@ -271,3 +315,7 @@ typedef uint64_t  uintmax_t;
 #endif // #ifdef __AUTO_STDINT_H_USESYS
 
 #endif // #ifndef __AUTO_STDINT_H_INCLUDED
+
+
+/** @} */	// @addtogroup GROUP_C99INT
+/** @} */	// @addtogroup GROUP_ZYLLIBC

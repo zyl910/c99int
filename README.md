@@ -68,4 +68,4 @@ int main(int argc, char* argv[])
 
 [2012-08-08] v1.0: http://www.cnblogs.com/zyl910/archive/2012/08/08/c99int.html
 
-* Release v1.0 .
+* Release v1.0 (发布1.0版) .

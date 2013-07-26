@@ -28,3 +28,7 @@
 *.tds
 
 /examples/c99inttest/build
+
+/docs/html
+
+*.ncb

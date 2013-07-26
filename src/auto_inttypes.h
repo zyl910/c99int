@@ -32,6 +32,21 @@ Update
 */
 ////////////////////////////////////////////////////////////
 
+
+/** @addtogroup GROUP_ZYLLIBC	zylLibC
+ * @{
+ */
+
+/** @addtogroup GROUP_C99INT	c99int
+ * @{
+ */
+
+/**
+ * @file	auto_inttypes.h
+ * @brief	Auto include C99 inttypes.h (自动引用C99标准的inttypes.h).
+ * @since	@ref GROUP_C99INT 1.0
+ */
+
 #ifndef __AUTO_INTTYPES_H_INCLUDED
 #define __AUTO_INTTYPES_H_INCLUDED
 
@@ -349,3 +364,7 @@ imaxdiv_t __cdecl imaxdiv(intmax_t numer, intmax_t denom)
 #endif // #ifdef __AUTO_INTTYPES_H_USESYS
 
 #endif // #ifndef __AUTO_INTTYPES_H_INCLUDED
+
+
+/** @} */	// @addtogroup GROUP_C99INT
+/** @} */	// @addtogroup GROUP_ZYLLIBC
