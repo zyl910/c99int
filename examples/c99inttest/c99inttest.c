@@ -1,5 +1,5 @@
 
-/** @addtogroup GROUP_ZYLLIBC	zylLibC
+/** @addtogroup GROUP_ZYLLIBC	zyllibc
  * @{
  */
 
@@ -13,7 +13,7 @@
  * @author	[zyl910](mailto:zyl910hero@gmail.com)
  * @since	@ref GROUP_C99INT 1.0
  * @version	1.2
- * @date	2013-06-07
+ * @date	2013-07-30
  *
  * Links:
  *
@@ -23,13 +23,18 @@
  *
  * ## Change history (变更日志)
  *
+ * [2013-07-30] v1.2
+ *
+ * * Using @ref GROUP_C99INT v1.2 .
+ * * Using Doxygen style comments (使用doxygen规范注释).
+ *
  * [2013-01-10] v1.1
  *
- * + 使用V1.01版的auto_stdint.h、auto_inttypes.h.
+ * * Using @ref GROUP_C99INT v1.1 .
  *
  * [2013-06-08] v1.0
  *
- * + V1.0发布.
+ * * V1.0发布.
  *
  * @{
  */
@@ -40,9 +45,9 @@
  * @since	@ref GROUP_C99INT 1.0
  */
 
-#define __STDC_LIMIT_MACROS
-#define __STDC_CONSTANT_MACROS
-#define __STDC_FORMAT_MACROS
+#define __STDC_LIMIT_MACROS	//!< C++ implementations should define these macros only when __STDC_LIMIT_MACROS is defined before <stdint.h>is included.
+#define __STDC_CONSTANT_MACROS	//!< C++ implementations should define these macros only when __STDC_CONSTANT_MACROS is defined before <stdint.h>is included.
+#define __STDC_FORMAT_MACROS	//!< C++ implementations should define these macros only when __STDC_FORMAT_MACROSis defined before <inttypes.h>is included.
 
 #include <stdio.h>
 

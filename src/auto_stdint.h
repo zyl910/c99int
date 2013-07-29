@@ -1,6 +1,6 @@
 
-/** @addtogroup GROUP_ZYLLIBC	zylLibC
- * [zyl910](mailto:zyl910hero@gmail.com)'s C/C++ librarys.
+/** @addtogroup GROUP_ZYLLIBC	zyllibc
+ * [zyl910](https://github.com/zyl910/c99int)'s C/C++ librarys.
  * @{
  */
 
@@ -9,7 +9,7 @@
  *
  * @author	[zyl910](mailto:zyl910hero@gmail.com)
  * @version	1.2
- * @date	2013-07-26
+ * @date	2013-07-30
  *
  * Links:
  *
@@ -19,17 +19,20 @@
  *
  * ## Change history (变更日志)
  *
- * [2013-07-26] v1.2
+ * [2013-07-30] v1.2
  *
- * * 调整目录结构.
- * * 使用doxygen规范注释.
+ * * Upload the code to [github](https://github.com/zyl910/c99int) (将代码上传到github).
+ * * Change the directory structure (调整目录结构).
+ * * Using Doxygen style comments (使用doxygen规范注释).
+ * * Add CMake file (添加CMake编译配置文件).
+ * * Fix bug: `__AUTO_STDINT_H_USESYS` (修正 `__AUTO_STDINT_H_USESYS` 误为 `_INTTYPES_H_SYS_` 的bug).
  *
- * [2013-07-26] v1.1
+ * [2013-07-26] v1.1: http://www.cnblogs.com/zyl910/archive/2013/01/10/c99int_v101.html
  *
  * * Files rename to "auto_stdint.h", "auto_inttypes.h" (文件改名为 "auto_stdint.h", "auto_inttypes.h").
  * * Check compiler compliant(检测编译器兼容性): Visual C++ 9(2008), Visual C++ 11(2012).
  *
- * [2012-08-08] v1.0
+ * [2012-08-08] v1.0: http://www.cnblogs.com/zyl910/archive/2012/08/08/c99int.html
  *
  * * Release v1.0 (发布1.0版) .
  *
@@ -59,7 +62,10 @@
 		#define __AUTO_STDINT_H_USESYS
 	#endif	// #if __BORLANDC__ >=0x0560	// BCB6
 #else
-	#define _INTTYPES_H_SYS_	// 假设其他编译器支持C99.
+	/**
+	 * Is the compiler exist `<stdint.h>` (编译器是否提供了`<stdint.h>`) ?
+	 */
+	#define __AUTO_STDINT_H_USESYS	// 假设其他编译器支持C99.
 #endif	// __AUTO_STDINT_H_USESYS
 
 

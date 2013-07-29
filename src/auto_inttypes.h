@@ -1,5 +1,5 @@
 
-/** @addtogroup GROUP_ZYLLIBC	zylLibC
+/** @addtogroup GROUP_ZYLLIBC	zyllibc
  * @{
  */
 
@@ -23,6 +23,9 @@
 #elif defined(_MSC_VER)	// MSVC. VC2012仍不支持.
 #elif defined(__BORLANDC__)	// BCB. BCB6仍不支持.
 #else
+	/**
+	 * Is the compiler exist `<inttypes.h>` (编译器是否提供了`<inttypes.h>`) ?
+	 */
 	#define __AUTO_INTTYPES_H_USESYS	// 假设其他编译器支持C99.
 #endif	// __AUTO_INTTYPES_H_USESYS
 

@@ -9,25 +9,6 @@ c99int
 * Blog:	http://www.cnblogs.com/zyl910/tag/c99int/
 * Git:	https://github.com/zyl910/c99int
 
-Tested compiler (测试过的编译器) --
-
-* Virtual C++: 6, 7.1(2003), 8(2005), 9(2008), 10(2010), 11(2012).
-* Borland C++ Builder: 6.
-* GCC(Linux): 4.7.0(Fedora 17).
-* GCC(Mac): 4.2(Mac OS X Lion 10.7.4, Xcode 4.4.1).
-* GCC(MinGW): 4.6.2(MinGW(20120426)), 4.7.1(TDM-GCC(MinGW-w64)).
-
-References (参考文献) --
-
-* ISO/IEC 9899:1999 (C99). ISO/IEC，1999. www.open-std.org/jtc1/sc22/wg14/www/docs/n1124.pdf
-* msinttypes. http://code.google.com/p/msinttypes/
-
-
-
-## Files (文件)
-
-* auto_inttypes.h : Auto include C99 inttypes.h .
-* auto_stdint.h : Auto include C99 stdint.h .
 
 
 ## Usage (用法)
@@ -59,7 +40,30 @@ int main(int argc, char* argv[])
 ```
 
 
-## Version history (版本历史)
+## Tested compiler (测试过的编译器)
+
+* Virtual C++: 6, 7.1(2003), 8(2005), 9(2008), 10(2010), 11(2012).
+* Borland C++ Builder: 6.
+* GCC(Linux): 4.7.0(Fedora 17).
+* GCC(Mac): 4.2(Mac OS X Lion 10.7.4, Xcode 4.4.1).
+* GCC(MinGW): 4.6.2(MinGW(20120426)), 4.7.1(TDM-GCC(MinGW-w64)).
+
+
+## References (参考文献)
+
+* ISO/IEC 9899:1999 - Programming languages -- C (C99). ISO/IEC，1999.
+* msinttypes. http://code.google.com/p/msinttypes/
+
+
+## Change history (变更日志)
+
+[2013-07-30] v1.2: 
+
+* Upload the code to [github](https://github.com/zyl910/c99int) (将代码上传到github).
+* Change the directory structure (调整目录结构).
+* Using Doxygen style comments (使用doxygen规范注释).
+* Add CMake file (添加CMake编译配置文件).
+* Fix bug: `__AUTO_STDINT_H_USESYS` (修正 `__AUTO_STDINT_H_USESYS` 误为 `_INTTYPES_H_SYS_` 的bug).
 
 [2013-01-10] v1.1: http://www.cnblogs.com/zyl910/archive/2013/01/10/c99int_v101.html
 
