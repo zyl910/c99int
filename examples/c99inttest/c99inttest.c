@@ -18,7 +18,9 @@
  * Links:
  *
  * * Git: https://github.com/zyl910/c99int
- * * Blog: http://www.cnblogs.com/zyl910
+ * * Blog: http://www.cnblogs.com/zyl910/tag/c99int/
+ *
+ * c99int is a lightweight C library (c99int是一个轻量级C库). Use for auto C99 integer type compliant (用于让VC等编译器自动兼容C99的整数类型) .
  *
  *
  * ## Change history (变更日志)

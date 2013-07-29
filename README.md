@@ -1,14 +1,16 @@
 c99int
 ======
 
-* Brief:	Auto C99 integer type compliant (让VC等编译器自动兼容C99的整数类型) .
-* Language:	C
-* Type:	Lightweight C library.
-* Platform:	All platform.
-* Version:	v1.1
-* Blog:	http://www.cnblogs.com/zyl910/tag/c99int/
 * Git:	https://github.com/zyl910/c99int
+* Blog:	http://www.cnblogs.com/zyl910/tag/c99int/
 
+c99int is a lightweight C library. Use for auto C99 integer type compliant (用于让VC等编译器自动兼容C99的整数类型) .
+
+
+References (参考文献) :
+
+* ISO/IEC 9899:1999 - Programming languages -- C (C99). ISO/IEC，1999.
+* msinttypes. http://code.google.com/p/msinttypes/
 
 
 ## Usage (用法)
@@ -39,6 +41,17 @@ int main(int argc, char* argv[])
 }
 ```
 
+## Documentation (文档)
+
+You can generate documentation with [doxygen](http://www.stack.nl/~dimitri/doxygen/index.html) (您可以用doxygen生成文档).
+
+Use doxywizard to open *.doxygen file (使用doxywizard打开 *.doxygen).
+
+* c99int_doc.doxygen: Generates documentation from interface files (生成接口的文档) .
+* c99int_docfull.doxygen: Generates documentation from interface and implement and example files (生成接口、实现、示例等内容的详细文档).
+
+You may need change INCLUDE_PATH in *.doxyfile with the actual location (您可能需要在 *.doxygen 中调整INCLUDE_PATH为实际路径).
+
 
 ## Tested compiler (测试过的编译器)
 
@@ -48,11 +61,6 @@ int main(int argc, char* argv[])
 * GCC(Mac): 4.2(Mac OS X Lion 10.7.4, Xcode 4.4.1).
 * GCC(MinGW): 4.6.2(MinGW(20120426)), 4.7.1(TDM-GCC(MinGW-w64)).
 
-
-## References (参考文献)
-
-* ISO/IEC 9899:1999 - Programming languages -- C (C99). ISO/IEC，1999.
-* msinttypes. http://code.google.com/p/msinttypes/
 
 
 ## Change history (变更日志)
