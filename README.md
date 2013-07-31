@@ -1,4 +1,4 @@
-c99int
+﻿c99int
 ======
 
 * Git:	https://github.com/zyl910/c99int
@@ -15,7 +15,7 @@ References (参考文献) :
 
 ## Usage (用法)
 
-Add "auto_stdint.h" and "auto_inttypes.h" to you project (将"auto_stdint.h" and "auto_inttypes.h"加入到您的项目).
+Add `src/*.*` to you project (将 `src/*.*` 加入到您的项目).
 
 Example code:
 
@@ -79,9 +79,9 @@ THE SOFTWARE.
 
 * Virtual C++: 6, 7.1(2003), 8(2005), 9(2008), 10(2010), 11(2012).
 * Borland C++ Builder: 6.
-* GCC(Linux): 4.7.0(Fedora 17).
-* GCC(Mac): 4.2(Mac OS X Lion 10.7.4, Xcode 4.4.1).
+* GCC(Linux): 4.7.0(Fedora 17),  4.7.2(Fedora 18),  4.8.1(Fedora 19).
 * GCC(MinGW): 4.6.2(MinGW(20120426)), 4.7.1(TDM-GCC(MinGW-w64)).
+* LLVM GCC: 4.2(Mac OS X Lion 10.7.4), 4.2.1(Mac OS X Mountain Lion 10.8.3).
 
 
 
