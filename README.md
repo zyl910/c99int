@@ -89,10 +89,10 @@ THE SOFTWARE.
 
 [2013-07-30] v1.2: 
 
-* Upload the code to [github](https://github.com/zyl910/c99int) (将代码上传到github).
+* Upload the source code to [github](https://github.com/zyl910/c99int) (将源码上传到github).
 * Change the directory structure (调整目录结构).
-* Using Doxygen style comments (使用doxygen规范注释).
 * Add CMake file (添加CMake编译配置文件).
+* Using Doxygen style comments (使用doxygen规范注释).
 * Fix bug: `__AUTO_STDINT_H_USESYS` (修正 `__AUTO_STDINT_H_USESYS` 误为 `_INTTYPES_H_SYS_` 的bug).
 
 [2013-01-10] v1.1: http://www.cnblogs.com/zyl910/archive/2013/01/10/c99int_v101.html
